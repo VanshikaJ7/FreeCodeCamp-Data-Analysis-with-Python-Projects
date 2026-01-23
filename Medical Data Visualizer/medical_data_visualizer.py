@@ -5,7 +5,7 @@ import seaborn as sns
 
 df = pd.read_csv("medical_examination.csv")
 
-df["overweight"]=(df("weight")/((df("height")/100)**2)>25).astype(int)
+df["overweight"]=(df['weight']/((df['height']/100)**2)>25).astype(int)
 
 df['cholesterol'] = (df['cholesterol'] > 1).astype(int)
 df['gluc'] = (df['gluc'] > 1).astype(int)
